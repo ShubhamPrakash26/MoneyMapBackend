@@ -20,6 +20,10 @@ app.get("/health", (req, res) => {
     res.status(200).json({ message: "Server is healthy" });
 });
 
+app.get("/", (req, res) => {
+    res.status(200).json({ message: "Welcome to the MonyMap App API" });
+})
+
 app.use("/api/transactions", transactionsRoute)
 
 
